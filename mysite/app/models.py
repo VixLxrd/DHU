@@ -2,7 +2,9 @@ from django.db import models
 
 
 class Home(models.Model):
-    region = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
-    address = models.CharField(max_length=200)
-    levels = models.PositiveSmallIntegerField()
+    city = models.SmallIntegerField()
+    adress = models.SmallIntegerField()
+    date = models.SmallIntegerField()
+    temp = models.SmallIntegerField()
+    aqua = models.SmallIntegerField()
+    el = models.SmallIntegerField()
