@@ -6,5 +6,6 @@ class Home(models.Model):
     adress = models.SmallIntegerField()
     date = models.SmallIntegerField()
     temp = models.SmallIntegerField()
-    aqua = models.SmallIntegerField()
+    aqua_cold = models.FloatField()
+    aqua_hot = models.FloatField()
     el = models.SmallIntegerField()
