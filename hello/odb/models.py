@@ -2,9 +2,12 @@ from django.db import models
 
 
 class Home(models.Model):
-    address = models.PositiveIntegerField()
+    city = models.PositiveIntegerField()
+    street = models.PositiveIntegerField()
+    house = models.PositiveIntegerField()
+    flat = models.PositiveIntegerField()
     date = models.PositiveIntegerField()
-    aqua_hot = models.PositiveIntegerField()
-    aqua_cold = models.PositiveIntegerField()
+    aqua_hot = models.FloatField()
+    aqua_cold = models.FloatField()
     el = models.PositiveIntegerField()
     temp = models.PositiveIntegerField()
