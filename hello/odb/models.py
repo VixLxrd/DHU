@@ -7,6 +7,7 @@ class Home(models.Model):
     house = models.PositiveIntegerField()
     flat = models.PositiveIntegerField()
     date = models.PositiveIntegerField()
+    year = models.PositiveIntegerField()
     aqua_hot = models.FloatField()
     aqua_cold = models.FloatField()
     el = models.PositiveIntegerField()
