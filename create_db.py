@@ -254,3 +254,45 @@ for i in range(1, 10001):
 #         anomalies.append({"id": i, "anomaly": "Temperature too much"})
 #     elif temp < median_temp[d] - check_coef_temp[d]:
 #         anomalies.append({"id": i, "anomaly": "Temperature too low"})
+
+# Прогнозирование
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import homes.csv
+
+# import sqlite3 бесполезная шняга
+#
+# conn = sqlite3.connect(r'C:\Users\G119\PycharmProjects\DHU\hello\db.sqlite3')
+# cur = conn.cursor()
+#
+# cur.execute("""CREATE TABLE IF NOT EXISTS homes(
+#    homeid INT PRIMARY KEY,
+#    city INT,
+#    house INT,
+#    flat INT,
+#    date INT,
+#    year INT,
+#    aquahot INT,
+#    aquacold INT,
+#    el INT,
+#    temp INT);
+# """)
+# conn.commit()
+#
+# for i in range(1, 10000):
+#     home = Home.objects.get(id=i)
+#     home_c = (
+#         home.id, home.city, home.house, home.flat, home.date, home.year, home.aqua_hot, home.aqua_cold, home.el,
+#         home.temp)
+#     cur.execute("INSERT INTO homes VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", home_c)
+# conn.commit()
+#
+# cur.execute("""SELECT *
+# FROM homes
+# WHERE year == '2001';""")
+#
+# all_2001 = cur.fetchall()
+
+df = pd.read_csv('homes.csv')

@@ -8,9 +8,9 @@
     <h2>Всего аномалий: <?=$anomalies.length ?></h2>
     <h2>Список аномалий</h2>
     <table>
-        <tr><th>id дома</th><th>Аномалия</th></tr>
-        {% for anomaly in anomalies %}
-        <tr><td>{{ anomaly.id }}</td><td>{{ anomaly.anomaly }}</td></tr>
+        <tr><th>Город</th><th>Улица</th><th>Дом</th><th>Квартира</th><th>Месяц</th><th>Аномалия</th></tr>
+        {% for anomaly in homes_anomalies %}
+        <tr><td>{{ anomaly.home.city }}</td><td>{{ anomaly.home.street }}</td><td>{{ anomaly.home.house }}</td><td>{{ anomaly.home.flat }}</td><td>{{ anomaly.home.date }}</td><td>{{ anomaly.anomaly }}</td></tr>
         {% endfor %}
     </table>
 </body>

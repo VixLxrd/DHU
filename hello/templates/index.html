@@ -9,7 +9,7 @@
     <table>
         <tr><th>Город</th><th>Улица</th><th>Дом</th><th>Квартира</th><th>Месяц</th><th>Год</th><th>Горячая вода, м3</th><th>Холодная вода, м3</th><th>Электричество, кВт/ч</th><th>Отопление, Гкал</th></tr>
         {% for home in homes %}
-        <tr><td>{{ home.city }}</td><td>{{ home.street }}</td><td>{{ home.house }}</td><td>{{ home.flat }}</td><td>{{ home.date }}</td><td>{{ home.year }}</td><td>{{ home.aqua_hot }}</td><td>{{ home.aqua_cold }}</td><td>{{ home.el }}</td><td>{{ home.temp }}</td></tr>
+        <tr><td>{{ home.city }},</td><td>{{ home.street }},</td><td>{{ home.house }},</td><td>{{ home.flat }},</td><td>{{ home.date }},</td><td>{{ home.year }},</td><td>{{ home.aqua_hot }},</td><td>{{ home.aqua_cold }},</td><td>{{ home.el }},</td><td>{{ home.temp }}</td></tr>
         {% endfor %}
     </table>
 </body>

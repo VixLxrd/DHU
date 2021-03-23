@@ -22,5 +22,3 @@ urlpatterns = [
     path('', views.index),
     path('anomalies/', views.anomalies)
 ]
-
-
