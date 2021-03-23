@@ -83,4 +83,3 @@ def anomalies(request):
     for i in anomalies:
         homes_anomalies.append({'home': Home.objects.get(id=i['id']), 'anomaly': i['anomaly']})
     return render(request, 'anomalies.html', {'homes_anomalies': homes_anomalies})
-

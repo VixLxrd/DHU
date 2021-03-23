@@ -260,7 +260,7 @@ for i in range(1, 10001):
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import homes.csv
+
 
 # import sqlite3 бесполезная шняга
 #
@@ -295,4 +295,16 @@ import homes.csv
 #
 # all_2001 = cur.fetchall()
 
-df = pd.read_csv('homes.csv')
+df = pd.read_csv('C:/Users/G119/PycharmProjects/DHU/homes.csv', delimiter=',',
+                 names=['City', 'Street', 'house', 'flat', 'month', 'year', 'aqua hot', 'aqua cold', 'electric',
+                        'heating'])
+
+df['date'] = df['month'].astype(str) + "-" + df['year'].astype(str)
+df.drop(["month", 'year'], axis=1)
+
+df2 = pd.Series([df.City, df.Street, df.house, df.flat, df.date, df['aqua hot'], df['aqua cold'], df.electric, df.heating], index=df.date)
+
+train = df[0:5000]
+test = df[5001:]
+
+df.reindex(df.date)
