@@ -9,5 +9,3 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('anomalies/', views.anomalies)
 ]
-
-
