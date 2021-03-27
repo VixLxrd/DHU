@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="chart/lib/liteChart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="q">
+            <p class="p"><img src="img3.PNG" class="a">Панель</p>
+            <p class="i"><img src="img1.PNG" class="u">Обзор</p>
+            <p class="y"><img src="img4.PNG" class="u">Профиль</p>
+            <p class="y"><img src="img5.PNG" class="o">Прогнозирование</p>
+            <p class="i"><img src="img1.PNG" class="u">Общее</p>
+            <p class="y"><img src="img6.PNG" class="u"><a>Настройки</p>
+            <p class="y"><img src="img7.PNG" class="o"><a href="home.html">Выход</a></p>
+        </div>
+        <div>
+        <div id="e" style="height: 400px;">
+            <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                let d = new liteChart("chart");
+                d.setLabels(["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]);
+                d.addLegend({"name": "Отопление", "stroke": "#ff8800", "fill": "#fff", "values": [560, 690, 625, 0,0,0,0,0,0,615,790,815]});
+                let div = document.getElementById("e");
+                d.inject(div);
+               d.draw();
+             });
+             </script>
+             </div>
+             <div id="q" style="height: 400px;">
+                <script>
+                document.addEventListener("DOMContentLoaded", function(){
+                    let d = new liteChart("chart_1");
+                    d.setLabels(["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]);
+                    d.addLegend({"name": "Электричество", "stroke": "#CDDC39", "fill": "#fff", "values": [170,305,340,255,354,318,245,250,333,315,243,432]});
+                    let div = document.getElementById("q");
+                    d.inject(div);
+                   d.draw();
+                 });
+        </script>
+    </div>
+    </div>
+</main>
+</body>
+</html>
