@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/liteChart.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static  %}">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="q">
+            <p class="p"><img src="{% static 'image/img3.png'%}" class="a">Панель</p>
+            <p class="i"><img src="{% static 'image/img1.png'%}" class="u">Обзор</p>
+            <p class="y"><img src="{% static 'image/img4.png'%}" class="u">Профиль</p>
+            <p class="y"><img src="{% static 'image/img5.png'%}" class="o">Прогнозирование</p>
+            <p class="y"><img src="{% static 'image/img6.png'%} class="u">Настройки</p>
+            <p class="y"><img src="img7.PNG" class="o"><a href="home.html">Выход</a></p>
+        </div>
+<div id="v">
+        <div class="s">
+                <p class="d">Обзор</p>
+                <p class="g">Информация за год</p>
+                <div class="f">
+                    <div id="w" style="height: 400px;">
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function(){
+                        let d = new liteChart("chart");
+                        d.setLabels(["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]);
+                        d.addLegend({"name": "Отопление", "stroke": "#CDDC39", "fill": "#fff", "values": [560, 690, 625, 0,0,0,0,0,0,615,790,815] });
+                        let div = document.getElementById("w");
+                        d.inject(div);
+                       d.draw();
+                     });
+                     </script>
+                     </div>
+                     <div>
+                        <p class="j">Информация за этот месяц:</p>
+                        <p class="j">Горячая вода:</p>
+                        <p class="j">3.1 м^3 (148 руб)</p>
+                        <p class="j">Холодная вода:</p>
+                        <p class="j">2.46 м^3 (54 руб)</p>
+                        <p class="j">Электричество:</p>
+                        <p class="j">257 кВт/ч (900 руб)</p>
+                        <p class="j">Отопление:</p>
+                        <p class="j">698 кДж (2303 руб)</p>
+                        </div>
+                   </div>
+                   <div id="v">
+                    <div class="v">
+                        <p align="center">Февраль 2021:</p>
+                        <p class="n">Горячая вода:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            2.13 м^3 (93 руб)</p>
+                        <p class="n">Холодная вода:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            3.5 м^3 (77 руб)
+                        </p>
+                        <p class="n">Электричество:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        428 кВт/ч (1498 руб)
+                    </p>
+                        <p class="n">Отопление:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        563 кДж (1858 руб)
+                    </p>
+                    </div>
+                    <div  class="v">
+                        <p align="center">Январь 2021:</p>
+                        <p class="n">Горячая вода:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            7.17 м^3 (305 руб)</p>
+                        <p class="n">Холодная вода:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            5.17 м^3 (115 руб)
+                        </p>
+                        <p class="n">Электричество:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        252 кВт/ч (882 руб)
+                    </p>
+                        <p class="n">Отопление:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        821 кДж (2709 руб)
+                    </p>
+                    </div>
+                    <div  class="v">
+                        <p align="center">Март 2020:</p>
+                        <p class="n">Горячая вода:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            5.49 м^3 (233 руб)</p>
+                        <p class="n">Холодная вода:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            2,67 м^3 (60 руб)
+                        </p>
+                        <p class="n">Электричество:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        394 кВт/ч (1379 руб)
+                    </p>
+                        <p class="n">Отопление:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        620 кДж (2046 руб)
+                    </p>
+                    </div>
+                </div>
+             </div>
+         </div>
+    </main>
+</body>
+</html>
