@@ -57,30 +57,30 @@ def anomalies(request):
         arith_temp[i] = 0
         dev_temp[i] = 0
 
-    for i in range(1, 10001):
-        d = Home.objects.get(id=i).date
-        ah = Home.objects.get(id=i).aqua_hot
-        ac = Home.objects.get(id=i).aqua_cold
-        el = Home.objects.get(id=i).el
-        temp = Home.objects.get(id=i).temp
-        if ah > arith_ah[d] + dev_ah[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком большое потребление горячей воды"})
-        elif ah < arith_ah[d] - dev_ah[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком малое потребление горячей воды"})
-        if ac > arith_ac[d] + dev_ac[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком большое потребление холодной воды"})
-        elif ac < arith_ac[d] - dev_ac[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком малое потребление холодной воды"})
-        if el > arith_el[d] + dev_el[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком большое потребление электричества"})
-        elif el < arith_el[d] - dev_el[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком малое потребление электричества"})
-        if temp > arith_temp[d] + dev_temp[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком большое отопление"})
-        elif temp < arith_temp[d] - dev_temp[d]:
-            anomalies.append({"id": i, "anomaly": "Слишком малое отопление"})
-    homes_anomalies = []
-    for i in anomalies:
-        homes_anomalies.append({'home': Home.objects.get(id=i['id']), 'anomaly': i['anomaly']})
-    return render(request, 'anomalies.html', {'homes_anomalies': homes_anomalies})
+    # for i in range(1, 10001):
+    #     d = Home.objects.get(id=i).date
+    #     ah = Home.objects.get(id=i).aqua_hot
+    #     ac = Home.objects.get(id=i).aqua_cold
+    #     el = Home.objects.get(id=i).el
+    #     temp = Home.objects.get(id=i).temp
+    #     if ah > arith_ah[d] + dev_ah[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком большое потребление горячей воды"})
+    #     elif ah < arith_ah[d] - dev_ah[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком малое потребление горячей воды"})
+    #     if ac > arith_ac[d] + dev_ac[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком большое потребление холодной воды"})
+    #     elif ac < arith_ac[d] - dev_ac[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком малое потребление холодной воды"})
+    #     if el > arith_el[d] + dev_el[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком большое потребление электричества"})
+    #     elif el < arith_el[d] - dev_el[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком малое потребление электричества"})
+    #     if temp > arith_temp[d] + dev_temp[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком большое отопление"})
+    #     elif temp < arith_temp[d] - dev_temp[d]:
+    #         anomalies.append({"id": i, "anomaly": "Слишком малое отопление"})
+    # homes_anomalies = []
+    # for i in anomalies:
+    #     homes_anomalies.append({'home': Home.objects.get(id=i['id']), 'anomaly': i['anomaly']})
+    # return render(request, 'anomalies.html', {'homes_anomalies': homes_anomalies})
 

@@ -1,4 +1,4 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{% static 'js/liteChart.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static  %}">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
     <main>
         <div class="q">
-            <p class="p"><img src="{% static 'image/img3.png'%}" class="a">Панель</p>
-            <p class="i"><img src="{% static 'image/img1.png'%}" class="u">Обзор</p>
-            <p class="y"><img src="{% static 'image/img4.png'%}" class="u">Профиль</p>
-            <p class="y"><img src="{% static 'image/img5.png'%}" class="o">Прогнозирование</p>
-            <p class="y"><img src="{% static 'image/img6.png'%} class="u">Настройки</p>
-            <p class="y"><img src="img7.PNG" class="o"><a href="home.html">Выход</a></p>
+            <p class="p"><img src="{% static 'image/img3.png' %}" class="a">STATNAL</p>
+            <p class="i"><img src="{% static 'image/img1.png' %}" class="u"><a href="graph.html">Панель администратора</a></p>
+            <p class="y"><img src="{% static 'image/img4.png' %}" class="u">Профиль</p>
+            <p class="y"><img src="{% static 'image/img5.png' %}" class="o">Прогнозирование</p>
+            <p class="i"><img src="{% static 'image/img1.png' %}" class="u"><a href="statistic.html">Общее</a></p>
+            <p class="y"><img src="{% static 'image/img6.png' %}" class="u">Настройки</p>>
+            <p class="y"><img src="{% static 'image/img7.png' %}" class="o"><a href="home.html">Выход</a></p>
         </div>
 <div id="v">
         <div class="s">
@@ -30,7 +31,7 @@
                     document.addEventListener("DOMContentLoaded", function(){
                         let d = new liteChart("chart");
                         d.setLabels(["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]);
-                        d.addLegend({"name": "Отопление", "stroke": "#CDDC39", "fill": "#fff", "values": [560, 690, 625, 0,0,0,0,0,0,615,790,815] });
+                        d.addLegend({"name": "Отопление", "stroke": "#CDDC39", "fill": "#fff", "values": [560, 690, 625, 0,0,0,0,0,0,615,790,815]});
                         let div = document.getElementById("w");
                         d.inject(div);
                        d.draw();

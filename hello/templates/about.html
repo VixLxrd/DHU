@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/liteChart.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <div class="q">
+        <p class="y"><img src="{% static 'image/img1.png' %}" class="u"><a href=graph.html>Вход</a></p>
+        <p class="y"><img src="{% static 'image/img2.png' %}" class="u"><a href="about.html">О проекте</a></p>
+    </div>
+    <div class="e">
+        <div class="z">
+            <p class="x">О проекте:</p>
+            <p class="c">Веб сервис, который собирает данные от ЖКХ или УК и анализирует их. После анализа сервис делает вывод о том, где есть аномальное потребление и в случае превышения норм сервис будет оповещать пользователя и после его подтверждения отправлять запрос в вышестоящие ресурсообеспечивающие организации такие как ЭнергоСбыт и  АО ЕЭСК(Екатеринбургская элекстросетевая компания). Получение данных автоматизированно: после поступления их от ЖКХ они парсятся и вносятся в базу данных. Пользователи могут посмотреть свою текущую статистику, статистику за прошлое время и наличие у них ненормального потребления. Также система способна прогнозировать потребление в следующем месяце и выдавать график за следующий год, на основе уже имеющихся данных.
+            </p>
+        </div>
+    </div>
+</main>
+</body>
+</html>
