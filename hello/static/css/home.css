@@ -19,13 +19,7 @@ body{
     height: 991px;
     width: 18%;
 }
-.e{
-    text-align: right;
-    background: url(img.jpg) center no-repeat;
-    height: 991px;
-    width: 82%;
-    text-align: center;
-}
+
 main{
 display: flex;
 }
